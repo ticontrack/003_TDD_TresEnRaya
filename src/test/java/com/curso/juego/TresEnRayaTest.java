@@ -104,6 +104,57 @@ public class TresEnRayaTest {
     	
     }
     
+    @Test
+    public void cuandoJugadorHaceLineaHorizontalThenGana(){
+        String ganador = null;
+        ganador = tresEnRaya.jugar(2, 1); //X
+        ganador = tresEnRaya.jugar(1, 1); //O
+        ganador = tresEnRaya.jugar(2, 2); //X
+        ganador = tresEnRaya.jugar(1, 2); //O
+        ganador = tresEnRaya.jugar(2, 3); //X
+        assertEquals(ganador, "X es el ganador");
+        
+    }
+    
+    @Test
+    public void cuandoJugadorHaceLineaVertialThenGana(){
+        String ganador = null;
+        ganador = tresEnRaya.jugar(1, 2); //X
+        ganador = tresEnRaya.jugar(1, 1); //O
+        ganador = tresEnRaya.jugar(2, 2); //X
+        ganador = tresEnRaya.jugar(2, 1); //O
+        ganador = tresEnRaya.jugar(3, 2); //X
+        assertEquals(ganador, "X es el ganador");
+        
+    }
+          
+    
+    @Test
+    public void cuandoJugadorHaceLineaDiagonalIzdaThenGana(){
+        String ganador = null;
+        ganador = tresEnRaya.jugar(1, 1); //X
+        ganador = tresEnRaya.jugar(1, 2); //O
+        ganador = tresEnRaya.jugar(2, 2); //X
+        ganador = tresEnRaya.jugar(2, 1); //O
+        ganador = tresEnRaya.jugar(3, 3); //X
+        assertEquals(ganador, "X es el ganador");
+        
+    }
+    
+     @Test
+    public void cuandoJugadorHaceLineaDiagonalDrchThenGana(){
+        String ganador = null;
+        ganador = tresEnRaya.jugar(3, 1); //X
+        ganador = tresEnRaya.jugar(1, 2); //O
+        ganador = tresEnRaya.jugar(2, 2); //X
+        ganador = tresEnRaya.jugar(3, 3); //O
+        ganador = tresEnRaya.jugar(1, 3); //X
+        assertEquals(ganador, "X es el ganador");
+        
+    }
+    
+    
+    
     
     
     
