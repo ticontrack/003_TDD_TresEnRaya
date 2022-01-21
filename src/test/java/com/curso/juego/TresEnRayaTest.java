@@ -115,4 +115,33 @@ public class TresEnRayaTest {
         assertEquals(ganador, "X es el ganador");
         
     }
+     
+     @Test
+     public void cuandoTodasCeldasLLenasThenEmpate(){
+         String ganador = null;
+         ganador = tresEnRaya.jugar(1, 1); //X
+         assertEquals(ganador,"No hay ganador");
+         ganador = tresEnRaya.jugar(1, 2); //O
+         assertEquals(ganador,"No hay ganador");
+         ganador = tresEnRaya.jugar(1, 3); //X
+         assertEquals(ganador,"No hay ganador");
+         ganador = tresEnRaya.jugar(2, 2); //O
+         assertEquals(ganador,"No hay ganador");
+         ganador = tresEnRaya.jugar(3, 2); //X
+         assertEquals(ganador,"No hay ganador");
+         ganador = tresEnRaya.jugar(2, 3); //O
+         assertEquals(ganador,"No hay ganador");
+         ganador = tresEnRaya.jugar(2, 1); //X
+         assertEquals(ganador,"No hay ganador");
+         ganador = tresEnRaya.jugar(3, 1); //O
+         assertEquals(ganador,"No hay ganador");
+         ganador = tresEnRaya.jugar(3, 3); //X
+         assertEquals(ganador, "Hay empate!!");
+         
+     }
+     
+     
+     
+     
+     
 }
